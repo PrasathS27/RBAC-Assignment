@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RBAC UI</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Role-Based Access Control (RBAC)</h1>
+
+        <!-- User Management -->
+        <section>
+            <h2>User Management</h2>
+            <div>
+                <input id="userName" type="text" placeholder="Enter User Name" />
+                <select id="roleSelect">
+                    <option value="Admin">Admin</option>
+                    <option value="Editor">Editor</option>
+                    <option value="Viewer">Viewer</option>
+                </select>
+                <button onclick="addUser()">Add User</button>
+            </div>
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th>User Name</th>
+                        <th>Role</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+
+        <!-- Role Management -->
+        <section>
+            <h2>Role Management</h2>
+            <div>
+                <input id="roleName" type="text" placeholder="Enter Role Name" />
+                <input id="permissions" type="text" placeholder="Enter Permissions (comma-separated)" />
+                <button onclick="addRole()">Add Role</button>
+            </div>
+            <table id="roleTable">
+                <thead>
+                    <tr>
+                        <th>Role Name</th>
+                        <th>Permissions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
